@@ -31,7 +31,7 @@ at least 15 characters in length. One example run produces:
     short4!covering
 
 You can then select one of them that suits you as your new password. 
-Capital letters are not generated automatically, but you can place one  
+Capital letters are not generated automatically, but you can place one 
 anywhere within the password. 
 
 ## Underlying Details
