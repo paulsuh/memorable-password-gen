@@ -1,10 +1,10 @@
 # Memorable Password Generator
 
-This is a simple script to generate random passwords based on open two 
-word compound nouns, like "writing tablet". This makes them easy to 
-remember since they represent a single concept, unlike a pair of 
-unrelated words. The punctuation is chosen from the set of characters 
-that can be typed on an iPhone using the numeric mode of the standard 
+This is a simple script to generate random passwords based on open two
+word compound nouns, like "writing tablet". This makes them easy to
+remember since they represent a single concept, unlike a pair of
+unrelated words. The punctuation is chosen from the set of characters
+that can be typed on an iPhone using the numeric mode of the standard
 keyboard. This makes it easy to type on an iPhone.
 
 ## Usage
@@ -15,7 +15,7 @@ The generated passwords will be of the form:
 
     [word1][digit][punctuation][word2]
 
-By default the script will generate 10 potential passwords that are 
+By default the script will generate 10 potential passwords that are
 at least 15 characters in length. One example run produces: 
 
     $ ./memorable_password_gen.sh 
@@ -30,15 +30,15 @@ at least 15 characters in length. One example run produces:
     writing6$tablet
     short4!covering
 
-You can then select one of them that suits you as your new password. 
-Capital letters are not generated automatically, but you can place one  
+You can then select one of them that suits you as your new password.
+Capital letters are not generated automatically, but you can place one
 anywhere within the password. 
 
 ## Underlying Details
 
-The open compound nouns are taken from the file `256772co.mpo`, part 
-of the [Moby list][link01]. The words in the file were filtered to  
-remove compound nouns where one of the parts is less than four 
+The open compound nouns are taken from the file `256772co.mpo`, part
+of the [Moby list][link01]. The words in the file were filtered to
+remove compound nouns where one of the parts is less than four
 characters long, has more than two parts, or is a proper noun. 
 
 The list of actual words is stored in the bottom of the script itself,
