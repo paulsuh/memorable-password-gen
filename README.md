@@ -41,6 +41,11 @@ of the [Moby list][link01]. The words in the file were filtered to
 remove compound nouns where one of the parts is less than four 
 characters long, has more than two parts, or is a proper noun. 
 
+The list of actual words is stored in the bottom of the script itself,
+which is why the script is so large, almost 38k lines and 609k bytes.
+Only the first 140 lines or so is script, and about half of that is
+either comments or whitespace. 
+
 The script runs entirely locally and does not communicate with any
 remote systems. You can be confident that any password you generate
 will be completely private. 
