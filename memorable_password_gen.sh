@@ -47,9 +47,15 @@ random_punctuation() {
 
 }
 
+capitalize_word() {
+    echo $(tr '[:lower:]' '[:upper:]' <<< ${1:0:1})${1:1}
+}
+
 generate_random_password() {
     local word1
     local word2
+    local word1_capitalized
+    local word2_capitalized
     local punctuation
     local digit
     local local_result
@@ -62,13 +68,15 @@ generate_random_password() {
         random_line_from_file base_compound_nouns.txt
         word1=$(echo "${RANDOM_LINE_RESULT}" | egrep --only-matching '^\w+')
         word2=$(echo "${RANDOM_LINE_RESULT}" | egrep --only-matching '\w+$')
+        word1_capitalized=$(capitalize_word $word1)
+        word2_capitalized=$(capitalize_word $word2)
     
         random_punctuation    
         punctuation="${PUNCTUATION_RESULT}"
         
         digit=$(jot -r 1 0 9)
         
-        local_result="${word1}${digit}${punctuation}${word2}"
+        local_result="${word1_capitalized}${digit}${punctuation}${word2_capitalized}"
     
     done
     RANDOM_PASSWORD_RESULT="${local_result}"
