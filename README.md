@@ -1,5 +1,7 @@
 # Memorable Password Generator
 
+Copyright ©️2025 Paul Suh
+
 This is a simple script to generate random passwords based on open two
 word compound nouns, like "writing tablet". This makes them easy to
 remember since they represent a single concept, unlike a pair of
@@ -19,20 +21,18 @@ By default the script will generate 10 potential passwords that are
 at least 15 characters in length. One example run produces: 
 
     $ ./memorable_password_gen.sh 
-    border9(terrier
-    psychological4(counseling
-    antisterility4'factor
-    theological6-seminary
-    stilbine3.color
-    mitigating9&circumstances
-    pondus2-medicinale
-    repeat7.verbatim
-    writing6$tablet
-    short4!covering
+    Artesian8,Borer
+    Dirigible7:Balloon
+    Subconscious3$Urge
+    Biphenyl2'Rearrangement
+    Bluecoat1&School
+    Telephone9?Cabinet
+    Hydraulic8:Tailgate
+    Hydrosulphurous3?Acid
+    Dipodic3:Rhythm
+    Puerperal8(Fever
 
 You can then select one of them that suits you as your new password.
-Capital letters are not generated automatically, but you can place one
-anywhere within the password. 
 
 ## Underlying Details
 
@@ -43,7 +43,7 @@ characters long, has more than two parts, or is a proper noun.
 
 The list of actual words is stored in the bottom of the script itself,
 which is why the script is so large, almost 38k lines and 609k bytes.
-Only the first 140 lines or so is script, and about half of that is
+Only the first 146 lines is the script, and about half of that is
 either comments or whitespace. 
 
 The script runs entirely locally and does not communicate with any
